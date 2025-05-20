@@ -25,7 +25,10 @@ export function InfoBlock({
         <h2 className={`info__headline info__headline--${theme}`}>
           {headline}
         </h2>
-        <ReactMarkdown className="copy">{content}</ReactMarkdown>
+        <div className="copy">
+
+        <ReactMarkdown>{content}</ReactMarkdown>
+        </div>
         {cta && (
           <Link href={cta.href} target={cta.isExternal ? "_blank" : "_self"}>
             <button className={`btn btn--medium btn--${theme}`}>
